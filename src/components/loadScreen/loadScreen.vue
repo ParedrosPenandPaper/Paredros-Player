@@ -4,7 +4,7 @@
         <div class="button-container">
             <button class="import-button" @click="importAdventure">import</button>
             <button class="load-button" @click="notImplemented">load</button>
-            <input class="file-upload" type="file" @change="handleUpload"/>
+            <input id="file-upload" type="file" @change="handleUpload"/>
         </div>
     </div>
 </template>
@@ -17,11 +17,15 @@
                 alert("This function is not implemented yet")
             },
             importAdventure(clickEvent) {
-                document.querySelector('.file-upload').click()
+                document.querySelector('#file-upload').click()
                 clickEvent.preventDefault()
             },
             handleUpload(changeEvent) {
                 const uploadedFile = changeEvent.target.files[0]
+
+                // eslint-disable-next-line
+                console.log(uploadedFile)
+
                 uploadedFile.text()
                     .then(adventureJson => {
                         const uploadedAdventure = JSON.parse(adventureJson)
@@ -76,7 +80,7 @@
         border-color: #6c9dc6;
     }
 
-    .file-upload {
+    #file-upload {
         display: none;
     }
 </style>
