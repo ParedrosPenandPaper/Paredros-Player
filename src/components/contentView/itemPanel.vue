@@ -1,8 +1,8 @@
 <template>
-  <div class="character-panel-container">
+  <div class="item-panel-container">
     
-    <div class="character-thumbnail">💂🏻‍♂</div>
-    <div class="character-name">{{name}}</div>
+    <div class="item-thumbnail">🔨</div>
+    <div class="item-name">{{name}}</div>
 
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
 }
 </script>
 <style scoped>
-.character-panel-container{
+.item-panel-container{
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -27,15 +27,15 @@ export default {
   cursor: pointer;
 }
 
-.character-panel-container:hover{
+.item-panel-container:hover{
     border-color: #6c9dc6;
 }
 
-.character-thumbnail{
+.item-thumbnail{
   font-size: 2em;
 }
 
-.character-name{
+.item-name{
   margin-left: 1em;
   font-size: 1em;
 }
